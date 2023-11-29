@@ -1,0 +1,42 @@
+import random
+
+while True:
+    choices = ["rock", "paper", "scissors"]
+    player = None
+    bot_choice = random.choice(choices)
+    
+
+    while player not in choices:
+        player = input("rock, paper, or scissors? ").lower()
+    
+    if player == bot_choice:
+        print("Player chose " + player)
+        print("Bot chose " + bot_choice)
+        print("It's a tie")
+    elif player == "rock":
+        if bot_choice == "paper":
+            print("bot chose paper. You lose")
+            
+        else:
+            print("bot chose scissors. You win!")
+            
+    elif player == "scissors":
+        if bot_choice == "rock":
+            print("bot chose rock. you lose!")
+            
+        else:
+            print("bot chose paper. you win!")
+            
+    elif player == "paper":
+        if  bot_choice == "scissors":
+            print("bot chose scissors. you lose!")
+            
+        else:
+            print("bot chose rock. you win!")
+            
+    
+    play_again = input("would you like to play again? yes/no ").lower()
+    if play_again != "yes":
+        break
+    
+print("Bye!")
